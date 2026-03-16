@@ -18,7 +18,7 @@ def submit():
     email = request.form['email']
     password = request.form['password']
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO users (name, email, password) VALUES (%s, %s, %s)", (name, email, password))
+    cursor.execute("INSERT INTO log_in (name, email, password) VALUES (%s, %s, %s)", (name, email, password))
     conn.commit()
     return"Data inserted successfully!"
 if __name__ == '__main__':
