@@ -9,7 +9,7 @@ conn=psycopg2.connect(
         port="5432"
     )
 # Route to handle POST requests and insert data into the database
-@app.route('/')
+@app.route('/submit')
 def home():
     return(render_template('Reg.html'))
 @app.route('/submit', methods=['POST'])
