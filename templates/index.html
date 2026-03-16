@@ -12,9 +12,9 @@
         <div id="options">
             <ul>
                 <li>Home</li>
-                <li><a href=courses.html>Courses</a></li>
-                <li><a href="about_us.html" class="aboutus">About Us</a></li>
-                <li><a href="alumni.html">Alumni</a></li>
+                <a href="{{ url_for('courses') }}">Courses</a>
+                <a href="{{ url_for('about') }}">About Us</a>
+                <a href="{{ url_for('alumni') }}">Alumni</a>
                 <li><a href="tel:9999999999">contact</a></li>
             </ul>
         </div>
@@ -27,7 +27,7 @@
             <h1>Grow in your career with us</h1>
             <p>Inviting you to join our team and grow together.we are happy to have you on board.Inviting you to join
                 our team and grow together.we are happy to have you on board.</p>
-            <button onClick="window.location.href='Reg.html'">Let's Get Started</button>
+            <button onclick="window.location.href='{{ url_for('home') }}'">Let's Get Started</button>
         </div>
 
     </div>
