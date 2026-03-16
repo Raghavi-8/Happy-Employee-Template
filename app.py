@@ -21,8 +21,6 @@ def submit():
     cursor.execute("INSERT INTO log_in (name, email, password) VALUES (%s, %s, %s)", (name, email, password))
     conn.commit()
     return"Data inserted successfully!"
-if __name__ == '__main__':
-    app.run(debug=True)
 @app.route('/courses')
 def courses():
     return render_template("courses.html")
@@ -34,4 +32,6 @@ def about():
 @app.route('/alumni')
 def alumni():
     return render_template("alumni.html")
+        if __name__ == '__main__':
+    app.run(debug=True)
     
