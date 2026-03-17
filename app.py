@@ -1,5 +1,6 @@
 import psycopg2
 from flask import Flask,render_template, request
+from flask import redirect, url_for
 app = Flask(__name__)
 conn=psycopg2.connect(
         host="localhost",
@@ -22,8 +23,6 @@ def submit():
     password = request.form['password']
     cursor = conn.cursor()
     cursor.execute("INSERT INTO log_in (name, email, password) VALUES (%s, %s, %s)", (name, email, password))
-    conn.commit()
-    return"Data inserted successfully!"
         conn.commit()
         return.redirect("courses.html")
                 
