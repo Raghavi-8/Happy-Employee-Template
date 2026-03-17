@@ -9,8 +9,14 @@ conn=psycopg2.connect(
         port="5432"
     )
 # Route to handle POST requests and insert data into the database
-@app.route('/submit')
+@app.route('/')
 def home():
+        return(render_template('index.html')
+@app.route('/submit')
+def submit():
+        return(return_template('about_us.html')
+@app.route('/submit')
+def submit():
     return(render_template('Reg.html'))
 @app.route('/submit', methods=['POST'])
 def submit():
@@ -32,6 +38,6 @@ def about():
 @app.route('/alumni')
 def alumni():
     return render_template("alumni.html")
-        if __name__ == '__main__':
+if __name__ == '__main__':
     app.run(debug=True)
     
