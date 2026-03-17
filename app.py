@@ -24,7 +24,7 @@ def submit():
     cursor = conn.cursor()
     cursor.execute("INSERT INTO log_in (name, email, password) VALUES (%s, %s, %s)", (name, email, password))
     conn.commit()
-        return.redirect(url_for('courses'))
+        return redirect(url_for('courses'))
                 
 @app.route('/courses')
 def courses():
