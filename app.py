@@ -11,13 +11,10 @@ conn=psycopg2.connect(
 # Route to handle POST requests and insert data into the database
 @app.route('/')
 def home():
-        return(render_template('index.html')
-@app.route('/submit')
-def submit():
-        return(return_template('about_us.html')
-@app.route('/submit')
-def submit():
-    return(render_template('Reg.html'))
+        return(render_template('index.html'))
+@app.route('/register')
+def register():
+    return render_template('Reg.html')
 @app.route('/submit', methods=['POST'])
 def submit():
     name = request.form['name']
